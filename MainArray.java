@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Interactive test for ArrayStorage implementation
+ * Interactive test for ArrayStorage implemgit listentation
  * (just run, no need to understand)
  */
 public class MainArray {

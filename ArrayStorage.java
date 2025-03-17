@@ -13,10 +13,10 @@ public class ArrayStorage {
     }
 
     void save(Resume r) {
-        if(storage.length > tempForSave){
+        if (storage.length > tempForSave) {
             storage[tempForSave] = r;
             tempForSave++;
-        }else {
+        } else {
             System.out.println("The Storage is full");
         }
 
@@ -24,18 +24,24 @@ public class ArrayStorage {
 
     Resume get(String uuid) {
         for (Resume resume : storage) {
-            if (uuid.equals(resume.uuid)) {
-                return resume;
+            if (resume != null) {
+                if (uuid.equals(resume.uuid)) {
+                    return resume;
+                }
             }
         }
         return null;
     }
 
     void delete(String uuid) {
-        for(Resume numsForDelete : storage)
-            if (numsForDelete.uuid == uuid) {
+        for (Resume numsForDelete : storage) {
+            if (numsForDelete == null) {
+                continue;
+            }
+            if (numsForDelete.uuid.equals(uuid)) {
                 uuid = null;
             }
+        }
     }
 
     /**
@@ -46,7 +52,7 @@ public class ArrayStorage {
         for (Resume nums1 : storage) {
             if (nums1 != null) {
                 countLength++;
-            }else {
+            } else {
                 continue;
             }
         }
