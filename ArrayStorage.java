@@ -39,7 +39,7 @@ public class ArrayStorage {
                 continue;
             }
             if (numsForDelete.uuid.equals(uuid)) {
-                uuid = null;
+                numsForDelete.uuid = null;
             }
         }
     }
